@@ -1,0 +1,107 @@
+{
+  "actuator": {
+    "delay_ms": 10,
+    "rmse_Nm": {
+      "(a) Ideal model": 2.2268278136855715,
+      "(b) Analytical model": 1.6952745784665044,
+      "(c) Learned actuator net": 0.17698246838776133
+    },
+    "sweep": {
+      "delay_ms": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "ideal_rmse": [
+        1.3875044698689525,
+        1.547066720850595,
+        1.712520490419299,
+        1.881855797207258,
+        2.053641210159182,
+        2.2268278136855715,
+        2.40062335135858,
+        2.5744111690215234,
+        2.747697356701652,
+        2.920075713212738,
+        3.0912041146847775
+      ],
+      "analytical_rmse": [
+        0.9679797614047534,
+        1.0862101965571231,
+        1.2231566983512714,
+        1.3728617265111207,
+        1.531182495496079,
+        1.6952745784665044,
+        1.8631615988513242,
+        2.0334373389817495,
+        2.2050719169508475,
+        2.377287672314067,
+        2.549479369109529
+      ]
+    },
+    "seconds": 1.78
+  },
+  "domain_randomization": {
+    "controllers_kp_kd_ff": {
+      "Fixed (tuned on one floor)": [
+        34.08657648525839,
+        7.402774567233982,
+        0.23228964682322328
+      ],
+      "Randomized (tuned on many floors)": [
+        121.9445417188018,
+        21.87793593561867,
+        2.54577469275001
+      ]
+    },
+    "success_rates": {
+      "Fixed (tuned on one floor)": {
+        "Nominal floor": 1.0,
+        "Slippery (wet)": 1.0,
+        "Carpet (high friction)": 0.335,
+        "Heavier payload": 0.69,
+        "Weak motor": 1.0,
+        "Random mix": 0.585
+      },
+      "Randomized (tuned on many floors)": {
+        "Nominal floor": 1.0,
+        "Slippery (wet)": 1.0,
+        "Carpet (high friction)": 1.0,
+        "Heavier payload": 1.0,
+        "Weak motor": 1.0,
+        "Random mix": 0.91
+      }
+    },
+    "default_slider_outcome": {
+      "Fixed (tuned on one floor)": true,
+      "Randomized (tuned on many floors)": true
+    },
+    "seconds": 0.96
+  },
+  "kine2go": {
+    "synthetic_fallback_used": true,
+    "message": "Download failed: ProxyError: (MaxRetryError(\"HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/datasets/MIMUW-Robotics/kine2go/tree/main?recursive=True&expand=False (Caused by ProxyError('U Using the bundled SYNTHETIC sample instead.",
+    "shape": [
+      600,
+      61
+    ],
+    "seconds": 0.5
+  },
+  "sdk": {
+    "move_commands": 176,
+    "spots_investigated": 2,
+    "policy_steps": 50,
+    "control_ticks": 500,
+    "real_sdk_installed": false,
+    "seconds": 0.08
+  },
+  "total_demo_seconds": 4.99
+}

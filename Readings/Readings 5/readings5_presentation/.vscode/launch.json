@@ -1,0 +1,34 @@
+{
+    // VS Code run configurations (Run and Debug panel, or press F5).
+    // Select the .venv interpreter first: Ctrl+Shift+P -> "Python: Select Interpreter".
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run presentation (Streamlit)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit",
+            "args": ["run", "app.py"],
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        },
+        {
+            "name": "Export PowerPoint",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/export_pptx.py",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Smoke test (all demos + slides)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/tests/smoke_test.py",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
